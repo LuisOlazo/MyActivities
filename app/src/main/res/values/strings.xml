@@ -5,4 +5,8 @@
     <string name="label_phone">Phone</string>
     <string name="label_email">Email</string>
     <string name="label_contact_desc">Contact description</string>
+    <string name="label_next">Siguiente</string>
+    <string name="label_cancel">Cancel</string>
+    <string name="label_OK">OK</string>
+    <string name="label_birthdate">Set Date of Birth</string>
 </resources>
