@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">MyActivities</string>
+
+    <string name="label_full_name">Full name</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_email">Email</string>
+    <string name="label_contact_desc">Contact description</string>
+</resources>
