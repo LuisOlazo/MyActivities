@@ -22,7 +22,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_full_name"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -47,9 +47,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
-            android:datePickerMode="spinner" />
+            android:datePickerMode="spinner"
+            android:minDate="01/01/1900" />
 
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -59,14 +61,19 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="2dp"
                 android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
                 android:text="@string/label_cancel"
-                app:cornerRadius="0dp" />
+                app:cornerRadius="0dp"
+                tools:ignore="ButtonStyle" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:layout_weight="1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
                 android:text="@string/label_OK"
                 app:cornerRadius="0dp" />
 
@@ -88,7 +95,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_phone"
-            android:inputType="text"
+            android:inputType="phone"
             android:singleLine="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -108,7 +115,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/label_email"
-            android:inputType="text"
+            android:inputType="textEmailAddress"
             android:singleLine="true" />
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -126,11 +133,9 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="61dp"
             android:hint="@string/label_contact_desc"
-            android:inputType="text"
-            android:maxLines="3"
-            android:singleLine="false" />
+            android:inputType="textMultiLine" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
