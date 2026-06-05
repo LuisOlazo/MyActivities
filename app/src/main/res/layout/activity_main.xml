@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="@string/label_birthdate"
+            android:text="@string/label_set_birthdate"
             android:textSize="18sp" />
 
         <DatePicker
@@ -134,7 +134,7 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="61dp"
-            android:hint="@string/label_contact_desc"
+            android:hint="@string/label_description"
             android:inputType="textMultiLine" />
 
     </com.google.android.material.textfield.TextInputLayout>
