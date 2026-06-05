@@ -16,6 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputLayout;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 import java.util.function.Consumer;
 
@@ -49,7 +51,38 @@ public class MainActivity extends AppCompatActivity {
             btnOKDate.setEnabled(true);
             viewDatePicker.setEnabled(true);
         });
-        btnNext.setOnClickListener(view -> startConfirmActivity());
+        btnNext.setOnClickListener(view -> goToConfirmActivity());
+        loadPreviousContact();
+    }
+
+    private void loadPreviousContact() {
+        Intent intent = getIntent();
+        Bundle bundle = intent.getExtras();
+        if (bundle != null) {
+            String fullNames = bundle.getString(KEY_FULL_NAMES);
+            String birthdate = bundle.getString(KEY_BIRTHDATE);
+            String phone = bundle.getString(KEY_PHONE);
+            String email = bundle.getString(KEY_EMAIL);
+            String description = bundle.getString(KEY_DESCRIPTION);
+
+            setTextFromTextInputLayoutResId(R.id.tlFullNames, fullNames);
+            setTextFromTextInputLayoutResId(R.id.tlPhone, phone);
+            setTextFromTextInputLayoutResId(R.id.tlEmail, email);
+            setTextFromTextInputLayoutResId(R.id.tlContactDesc, description);
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
+            LocalDate localDate = LocalDate.parse(birthdate, formatter);
+            int day = localDate.getDayOfMonth();
+            int month = localDate.getMonthValue() - 1;
+            int year = localDate.getYear();
+            DatePicker viewDatePicker = getDatePicker();
+            viewDatePicker.init(year, month, day, null);
+        }
+    }
+
+    private void setTextFromTextInputLayoutResId(int resId, String value) {
+        TextInputLayout textInputLayout = findViewById(resId);
+        if (textInputLayout.getEditText() != null) textInputLayout.getEditText().setText(value);
     }
 
     private Contact getInfo() {
@@ -74,7 +107,8 @@ public class MainActivity extends AppCompatActivity {
         int year = viewDatePicker.getYear() % 100;
         return String.format(Locale.US, "%02d/%02d/%02d", day, month, year);
     }
-    private void startConfirmActivity() {
+
+    private void goToConfirmActivity() {
         Contact contact = getInfo();
         checkFields(contact, () -> {
             Intent intent = new Intent(getBaseContext(), ConfirmationActivity.class);
@@ -84,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra(KEY_EMAIL, contact.getEmail());
             intent.putExtra(KEY_DESCRIPTION, contact.getDescription());
             startActivity(intent);
+            finish();
         }, fields -> {
             String msg = getString(R.string.msg_invalid_fields).concat(":\n").concat(fields);
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
@@ -114,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         sb.append(getString(stringResId));
     }
 
-    private DatePicker getDatePicker(){
+    private DatePicker getDatePicker() {
         return findViewById(R.id.viewDatePicker);
     }
 
