@@ -49,7 +49,8 @@
             android:layout_height="wrap_content"
             android:calendarViewShown="false"
             android:datePickerMode="spinner"
-            android:minDate="01/01/1900" />
+            android:minDate="01/01/1900"
+            android:maxDate="01/01/2030"/>
 
         <LinearLayout
             style="?android:attr/buttonBarStyle"

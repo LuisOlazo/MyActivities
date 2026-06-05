@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             setTextFromTextInputLayoutResId(R.id.tlEmail, email);
             setTextFromTextInputLayoutResId(R.id.tlContactDesc, description);
 
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yy");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             LocalDate localDate = LocalDate.parse(birthdate, formatter);
             int day = localDate.getDayOfMonth();
             int month = localDate.getMonthValue() - 1;
@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
         DatePicker viewDatePicker = getDatePicker();
         int day = viewDatePicker.getDayOfMonth();
         int month = viewDatePicker.getMonth() + 1;
-        int year = viewDatePicker.getYear() % 100;
-        return String.format(Locale.US, "%02d/%02d/%02d", day, month, year);
+        int year = viewDatePicker.getYear();
+        return String.format(Locale.US, "%02d/%02d/%04d", day, month, year);
     }
 
     private void goToConfirmActivity() {
