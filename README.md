@@ -39,22 +39,13 @@ Al final de los datos, debes colocar un botón de "Editar datos". Este botón de
 - Datos precargados en el campo de texto al seleccionar "Editar Datos"
 
 ## Evidencias:
-### 1. Que utilice el elemento EditText de Material Design
+|1. Que utilice el elemento EditText de Material Design |2. Que tenga los campos solicitados|3. Picker para la fecha|
+| - | - | - |
+|<img width="1836" height="980" alt="image" src="https://github.com/user-attachments/assets/6e42522a-4e00-4f04-ad6c-0b6e0102f6f3" />|<img width="617" height="930" alt="image" src="https://github.com/user-attachments/assets/ba54ec21-0c19-4812-8724-4194ceb9cece" />|<img width="626" height="930" alt="image" src="https://github.com/user-attachments/assets/51d0b080-9297-4e40-ab91-347161c2f8a7" />|
 
-<img width="1836" height="980" alt="image" src="https://github.com/user-attachments/assets/6e42522a-4e00-4f04-ad6c-0b6e0102f6f3" />
-
-### 2. Que tenga los campos solicitados 
-<img width="617" height="930" alt="image" src="https://github.com/user-attachments/assets/ba54ec21-0c19-4812-8724-4194ceb9cece" />
-
-### 3. Picker para la fecha
-<img width="626" height="930" alt="image" src="https://github.com/user-attachments/assets/51d0b080-9297-4e40-ab91-347161c2f8a7" />
-
-### 4. Pantalla de confirmación de datos 
-<img width="622" height="925" alt="image" src="https://github.com/user-attachments/assets/f6a7c235-ed95-4212-bac9-837774946681" />
-
-### 5. Botón de "Editar datos"
-
-<img width="622" height="925" alt="image" src="https://github.com/user-attachments/assets/f6a7c235-ed95-4212-bac9-837774946681" />
+|4. Pantalla de confirmación de datos|5. Botón de "Editar datos"|
+| - | - |
+|<img width="622" height="925" alt="image" src="https://github.com/user-attachments/assets/f6a7c235-ed95-4212-bac9-837774946681" />|<img width="622" height="925" alt="image" src="https://github.com/user-attachments/assets/f6a7c235-ed95-4212-bac9-837774946681" />|
 
 ### 6. Datos precargados en el campo de texto al seleccionar "Editar Datos"
 [coursera3.module2.evidence.webm](https://github.com/user-attachments/assets/d5da8747-bfc9-4833-9125-507c0699abe8)
