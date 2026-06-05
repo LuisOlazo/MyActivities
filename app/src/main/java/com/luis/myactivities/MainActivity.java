@@ -20,11 +20,11 @@ import java.util.Locale;
 import java.util.function.Consumer;
 
 public class MainActivity extends AppCompatActivity {
-    private static final String KEY_FULL_NAMES = "fullNames";
-    private static final String KEY_BIRTHDATE = "birthdate";
-    private static final String KEY_PHONE = "phone";
-    private static final String KEY_EMAIL = "email";
-    private static final String KEY_DESCRIPTION = "description";
+    public static final String KEY_FULL_NAMES = "fullNames";
+    public static final String KEY_BIRTHDATE = "birthdate";
+    public static final String KEY_PHONE = "phone";
+    public static final String KEY_EMAIL = "email";
+    public static final String KEY_DESCRIPTION = "description";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
