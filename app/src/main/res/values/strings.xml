@@ -13,4 +13,6 @@
     <string name="label_confirm_data">Confirm Data</string>
     <string name="label_birthdate">Birthdate</string>
     <string name="label_edit_data">Edit Data</string>
+
+    <string name="msg_invalid_fields">Invalid Fields</string>
 </resources>
